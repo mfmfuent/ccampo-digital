@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @asesor.nombre %>
+</p>
+
+<p>
+  <strong>Apellido materno:</strong>
+  <%= @asesor.apellido_materno %>
+</p>
+
+<p>
+  <strong>Apellido paterno:</strong>
+  <%= @asesor.apellido_paterno %>
+</p>
+
+<p>
+  <strong>Rut:</strong>
+  <%= @asesor.rut %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @asesor.email %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @asesor.telefono %>
+</p>
+
+<p>
+  <strong>Numero inscripcion:</strong>
+  <%= @asesor.numero_inscripcion %>
+</p>
+
+<p>
+  <strong>Tipo representacion:</strong>
+  <%= @asesor.tipo_representacion %>
+</p>
+
+<p>
+  <strong>Explotacions:</strong>
+  <%= @asesor.explotacions_id %>
+</p>
+
+<%= link_to 'Edit', edit_asesor_path(@asesor) %> |
+<%= link_to 'Back', asesors_path %>

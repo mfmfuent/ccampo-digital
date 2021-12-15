@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Asesors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido materno</th>
+      <th>Apellido paterno</th>
+      <th>Rut</th>
+      <th>Email</th>
+      <th>Telefono</th>
+      <th>Numero inscripcion</th>
+      <th>Tipo representacion</th>
+      <th>Explotacions</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @asesors.each do |asesor| %>
+      <tr>
+        <td><%= asesor.nombre %></td>
+        <td><%= asesor.apellido_materno %></td>
+        <td><%= asesor.apellido_paterno %></td>
+        <td><%= asesor.rut %></td>
+        <td><%= asesor.email %></td>
+        <td><%= asesor.telefono %></td>
+        <td><%= asesor.numero_inscripcion %></td>
+        <td><%= asesor.tipo_representacion %></td>
+        <td><%= asesor.explotacions_id %></td>
+        <td><%= link_to 'Show', asesor %></td>
+        <td><%= link_to 'Edit', edit_asesor_path(asesor) %></td>
+        <td><%= link_to 'Destroy', asesor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Asesor', new_asesor_path %>
