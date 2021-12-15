@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :campos
   resources :explotacions
   resources :usuarios
   devise_for :users

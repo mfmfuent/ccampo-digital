@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @campo.nombre %>
+</p>
+
+<p>
+  <strong>Superficie:</strong>
+  <%= @campo.superficie %>
+</p>
+
+<p>
+  <strong>Explotacions:</strong>
+  <%= @campo.explotacions_id %>
+</p>
+
+<%= link_to 'Edit', edit_campo_path(@campo) %> |
+<%= link_to 'Back', campos_path %>
