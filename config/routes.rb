@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :representantes
   resources :campos
   resources :explotacions
   resources :usuarios

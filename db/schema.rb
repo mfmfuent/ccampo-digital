@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_15_023124) do
+ActiveRecord::Schema.define(version: 2021_12_15_190931) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,25 @@ ActiveRecord::Schema.define(version: 2021_12_15_023124) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "representantes", force: :cascade do |t|
+    t.string "nombre"
+    t.string "apellido_materno"
+    t.string "apellido_paterno"
+    t.string "rut"
+    t.string "email"
+    t.string "direccion"
+    t.string "localidad"
+    t.string "comuna"
+    t.string "region"
+    t.string "pais"
+    t.string "telefono"
+    t.string "tipo_representacion"
+    t.bigint "explotacions_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["explotacions_id"], name: "index_representantes_on_explotacions_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -64,4 +83,5 @@ ActiveRecord::Schema.define(version: 2021_12_15_023124) do
   end
 
   add_foreign_key "campos", "explotacions", column: "explotacions_id"
+  add_foreign_key "representantes", "explotacions", column: "explotacions_id"
 end

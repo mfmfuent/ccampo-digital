@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @representante.nombre %>
+</p>
+
+<p>
+  <strong>Apellido materno:</strong>
+  <%= @representante.apellido_materno %>
+</p>
+
+<p>
+  <strong>Apellido paterno:</strong>
+  <%= @representante.apellido_paterno %>
+</p>
+
+<p>
+  <strong>Rut:</strong>
+  <%= @representante.rut %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @representante.email %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @representante.direccion %>
+</p>
+
+<p>
+  <strong>Localidad:</strong>
+  <%= @representante.localidad %>
+</p>
+
+<p>
+  <strong>Comuna:</strong>
+  <%= @representante.comuna %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @representante.region %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @representante.pais %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @representante.telefono %>
+</p>
+
+<p>
+  <strong>Tipo representacion:</strong>
+  <%= @representante.tipo_representacion %>
+</p>
+
+<p>
+  <strong>Explotacions:</strong>
+  <%= @representante.explotacions_id %>
+</p>
+
+<%= link_to 'Edit', edit_representante_path(@representante) %> |
+<%= link_to 'Back', representantes_path %>

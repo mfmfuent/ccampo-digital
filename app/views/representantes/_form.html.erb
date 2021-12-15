@@ -1,0 +1,82 @@
+<%= form_with(model: representante) do |form| %>
+  <% if representante.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(representante.errors.count, "error") %> prohibited this representante from being saved:</h2>
+
+      <ul>
+        <% representante.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apellido_materno %>
+    <%= form.text_field :apellido_materno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apellido_paterno %>
+    <%= form.text_field :apellido_paterno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rut %>
+    <%= form.text_field :rut %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :localidad %>
+    <%= form.text_field :localidad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comuna %>
+    <%= form.text_field :comuna %>
+  </div>
+
+  <div class="field">
+    <%= form.label :region %>
+    <%= form.text_field :region %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pais %>
+    <%= form.text_field :pais %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefono %>
+    <%= form.text_field :telefono %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_representacion %>
+    <%= form.text_field :tipo_representacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :explotacions_id %>
+    <%= form.text_field :explotacions_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
