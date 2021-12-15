@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :representacions
   resources :asesors
   resources :representantes
   resources :campos

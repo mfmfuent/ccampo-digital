@@ -1,0 +1,37 @@
+<%= form_with(model: representacion) do |form| %>
+  <% if representacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(representacion.errors.count, "error") %> prohibited this representacion from being saved:</h2>
+
+      <ul>
+        <% representacion.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :representantes_id %>
+    <%= form.text_field :representantes_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :explotacions_id %>
+    <%= form.text_field :explotacions_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

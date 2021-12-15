@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_15_192213) do
+ActiveRecord::Schema.define(version: 2021_12_15_192413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,17 @@ ActiveRecord::Schema.define(version: 2021_12_15_192213) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "representacions", force: :cascade do |t|
+    t.string "nombre"
+    t.string "descripcion"
+    t.bigint "representantes_id", null: false
+    t.bigint "explotacions_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["explotacions_id"], name: "index_representacions_on_explotacions_id"
+    t.index ["representantes_id"], name: "index_representacions_on_representantes_id"
+  end
+
   create_table "representantes", force: :cascade do |t|
     t.string "nombre"
     t.string "apellido_materno"
@@ -99,5 +110,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_192213) do
 
   add_foreign_key "asesors", "explotacions", column: "explotacions_id"
   add_foreign_key "campos", "explotacions", column: "explotacions_id"
+  add_foreign_key "representacions", "explotacions", column: "explotacions_id"
+  add_foreign_key "representacions", "representantes", column: "representantes_id"
   add_foreign_key "representantes", "explotacions", column: "explotacions_id"
 end
