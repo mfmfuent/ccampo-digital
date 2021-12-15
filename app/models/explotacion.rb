@@ -1,0 +1,2 @@
+class Explotacion < ApplicationRecord
+end

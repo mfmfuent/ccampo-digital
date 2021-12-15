@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Explotacions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre explotacion</th>
+      <th>Rut</th>
+      <th>Email</th>
+      <th>Direccion</th>
+      <th>Telefono</th>
+      <th>Localidad</th>
+      <th>Comuna</th>
+      <th>Region</th>
+      <th>Pais</th>
+      <th>Thumbnail</th>
+      <th>Image</th>
+      <th>Nacional</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @explotacions.each do |explotacion| %>
+      <tr>
+        <td><%= explotacion.nombre_explotacion %></td>
+        <td><%= explotacion.rut %></td>
+        <td><%= explotacion.email %></td>
+        <td><%= explotacion.direccion %></td>
+        <td><%= explotacion.telefono %></td>
+        <td><%= explotacion.localidad %></td>
+        <td><%= explotacion.comuna %></td>
+        <td><%= explotacion.region %></td>
+        <td><%= explotacion.pais %></td>
+        <td><%= explotacion.thumbnail %></td>
+        <td><%= explotacion.image %></td>
+        <td><%= explotacion.nacional %></td>
+        <td><%= link_to 'Show', explotacion %></td>
+        <td><%= link_to 'Edit', edit_explotacion_path(explotacion) %></td>
+        <td><%= link_to 'Destroy', explotacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Explotacion', new_explotacion_path %>
