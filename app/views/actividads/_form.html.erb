@@ -1,0 +1,122 @@
+<%= form_with(model: actividad) do |form| %>
+  <% if actividad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(actividad.errors.count, "error") %> prohibited this actividad from being saved:</h2>
+
+      <ul>
+        <% actividad.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :act_para %>
+    <%= form.text_field :act_para %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trabajo %>
+    <%= form.text_field :trabajo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha %>
+    <%= form.date_select :fecha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :campo %>
+    <%= form.text_field :campo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fitosanitario %>
+    <%= form.text_field :fitosanitario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dosis %>
+    <%= form.text_field :dosis %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cantidad %>
+    <%= form.text_field :cantidad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :litros_caldo %>
+    <%= form.text_field :litros_caldo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plaga %>
+    <%= form.text_field :plaga %>
+  </div>
+
+  <div class="field">
+    <%= form.label :justifica_tratamiento %>
+    <%= form.text_field :justifica_tratamiento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero_lote %>
+    <%= form.text_field :numero_lote %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bodega %>
+    <%= form.text_field :bodega %>
+  </div>
+
+  <div class="field">
+    <%= form.label :det_med_no_quimica %>
+    <%= form.text_field :det_med_no_quimica %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_actuacion %>
+    <%= form.text_field :tipo_actuacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :intensidad_actuacion %>
+    <%= form.text_field :intensidad_actuacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_actuacion %>
+    <%= form.date_select :fecha_actuacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trabajador %>
+    <%= form.text_field :trabajador %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maquina %>
+    <%= form.text_field :maquina %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horas %>
+    <%= form.time_select :horas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :minutos %>
+    <%= form.time_select :minutos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notas %>
+    <%= form.text_area :notas %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

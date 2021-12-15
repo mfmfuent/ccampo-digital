@@ -10,10 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_15_192413) do
+ActiveRecord::Schema.define(version: 2021_12_15_234213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "actividads", force: :cascade do |t|
+    t.string "act_para"
+    t.string "trabajo"
+    t.date "fecha"
+    t.string "campo"
+    t.string "fitosanitario"
+    t.float "dosis"
+    t.float "cantidad"
+    t.float "litros_caldo"
+    t.string "plaga"
+    t.string "justifica_tratamiento"
+    t.string "numero_lote"
+    t.string "bodega"
+    t.string "det_med_no_quimica"
+    t.string "tipo_actuacion"
+    t.string "intensidad_actuacion"
+    t.date "fecha_actuacion"
+    t.string "trabajador"
+    t.string "maquina"
+    t.time "horas"
+    t.time "minutos"
+    t.text "notas"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "asesors", force: :cascade do |t|
     t.string "nombre"

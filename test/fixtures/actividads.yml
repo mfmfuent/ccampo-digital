@@ -1,0 +1,47 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  act_para: MyString
+  trabajo: MyString
+  fecha: 2021-12-15
+  campo: MyString
+  fitosanitario: MyString
+  dosis: 1.5
+  cantidad: 1.5
+  litros_caldo: 1.5
+  plaga: MyString
+  justifica_tratamiento: MyString
+  numero_lote: MyString
+  bodega: MyString
+  det_med_no_quimica: MyString
+  tipo_actuacion: MyString
+  intensidad_actuacion: MyString
+  fecha_actuacion: 2021-12-15
+  trabajador: MyString
+  maquina: MyString
+  horas: 2021-12-15 20:42:13
+  minutos: 2021-12-15 20:42:13
+  notas: MyText
+
+two:
+  act_para: MyString
+  trabajo: MyString
+  fecha: 2021-12-15
+  campo: MyString
+  fitosanitario: MyString
+  dosis: 1.5
+  cantidad: 1.5
+  litros_caldo: 1.5
+  plaga: MyString
+  justifica_tratamiento: MyString
+  numero_lote: MyString
+  bodega: MyString
+  det_med_no_quimica: MyString
+  tipo_actuacion: MyString
+  intensidad_actuacion: MyString
+  fecha_actuacion: 2021-12-15
+  trabajador: MyString
+  maquina: MyString
+  horas: 2021-12-15 20:42:13
+  minutos: 2021-12-15 20:42:13
+  notas: MyText
