@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @cultivo.nombre %>
+</p>
+
+<p>
+  <strong>Fitosanitarios:</strong>
+  <%= @cultivo.fitosanitarios_id %>
+</p>
+
+<p>
+  <strong>Actividads:</strong>
+  <%= @cultivo.actividads_id %>
+</p>
+
+<%= link_to 'Edit', edit_cultivo_path(@cultivo) %> |
+<%= link_to 'Back', cultivos_path %>

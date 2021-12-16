@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :cultivos
   resources :bodegas
   resources :trabajos
   resources :fitosanitarios

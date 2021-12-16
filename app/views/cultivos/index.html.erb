@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cultivos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Fitosanitarios</th>
+      <th>Actividads</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cultivos.each do |cultivo| %>
+      <tr>
+        <td><%= cultivo.nombre %></td>
+        <td><%= cultivo.fitosanitarios_id %></td>
+        <td><%= cultivo.actividads_id %></td>
+        <td><%= link_to 'Show', cultivo %></td>
+        <td><%= link_to 'Edit', edit_cultivo_path(cultivo) %></td>
+        <td><%= link_to 'Destroy', cultivo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cultivo', new_cultivo_path %>
