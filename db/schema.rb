@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_15_234213) do
+ActiveRecord::Schema.define(version: 2021_12_16_021452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "actividad_paras", force: :cascade do |t|
+    t.string "nombre"
+    t.bigint "actividads_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["actividads_id"], name: "index_actividad_paras_on_actividads_id"
+  end
 
   create_table "actividads", force: :cascade do |t|
     t.string "act_para"
@@ -134,6 +142,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_234213) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "actividad_paras", "actividads", column: "actividads_id"
   add_foreign_key "asesors", "explotacions", column: "explotacions_id"
   add_foreign_key "campos", "explotacions", column: "explotacions_id"
   add_foreign_key "representacions", "explotacions", column: "explotacions_id"
