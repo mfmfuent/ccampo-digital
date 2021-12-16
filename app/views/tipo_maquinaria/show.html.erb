@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @tipo_maquinarium.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @tipo_maquinarium.descripcion %>
+</p>
+
+<p>
+  <strong>Maquinaria:</strong>
+  <%= @tipo_maquinarium.maquinaria_id %>
+</p>
+
+<%= link_to 'Edit', edit_tipo_maquinarium_path(@tipo_maquinarium) %> |
+<%= link_to 'Back', tipo_maquinaria_path %>

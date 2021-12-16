@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_022832) do
+ActiveRecord::Schema.define(version: 2021_12_16_023048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -207,6 +207,15 @@ ActiveRecord::Schema.define(version: 2021_12_16_022832) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "tipo_maquinaria", force: :cascade do |t|
+    t.string "nombre"
+    t.string "descripcion"
+    t.bigint "maquinaria_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["maquinaria_id"], name: "index_tipo_maquinaria_on_maquinaria_id"
+  end
+
   create_table "tipo_trabajadors", force: :cascade do |t|
     t.string "nombre"
     t.datetime "created_at", precision: 6, null: false
@@ -283,6 +292,7 @@ ActiveRecord::Schema.define(version: 2021_12_16_022832) do
   add_foreign_key "representacions", "explotacions", column: "explotacions_id"
   add_foreign_key "representacions", "representantes", column: "representantes_id"
   add_foreign_key "representantes", "explotacions", column: "explotacions_id"
+  add_foreign_key "tipo_maquinaria", "maquinaria", column: "maquinaria_id"
   add_foreign_key "trabajadors", "actividads", column: "actividads_id"
   add_foreign_key "trabajadors", "tipo_trabajadors", column: "tipo_trabajadors_id"
   add_foreign_key "trabajos", "actividads", column: "actividads_id"
