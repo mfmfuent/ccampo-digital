@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Marca Maquinaria</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Fecha fabricacion</th>
+      <th>Maquinaria</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @marca_maquinaria.each do |marca_maquinarium| %>
+      <tr>
+        <td><%= marca_maquinarium.marca %></td>
+        <td><%= marca_maquinarium.modelo %></td>
+        <td><%= marca_maquinarium.fecha_fabricacion %></td>
+        <td><%= marca_maquinarium.maquinaria_id %></td>
+        <td><%= link_to 'Show', marca_maquinarium %></td>
+        <td><%= link_to 'Edit', edit_marca_maquinarium_path(marca_maquinarium) %></td>
+        <td><%= link_to 'Destroy', marca_maquinarium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Marca Maquinarium', new_marca_maquinarium_path %>

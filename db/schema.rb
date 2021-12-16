@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_023048) do
+ActiveRecord::Schema.define(version: 2021_12_16_024020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -156,6 +156,16 @@ ActiveRecord::Schema.define(version: 2021_12_16_023048) do
     t.index ["actividads_id"], name: "index_maquinaria_on_actividads_id"
   end
 
+  create_table "marca_maquinaria", force: :cascade do |t|
+    t.string "marca"
+    t.string "modelo"
+    t.date "fecha_fabricacion"
+    t.bigint "maquinaria_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["maquinaria_id"], name: "index_marca_maquinaria_on_maquinaria_id"
+  end
+
   create_table "registro_mantencions", force: :cascade do |t|
     t.string "nombre"
     t.string "descripcion"
@@ -287,6 +297,7 @@ ActiveRecord::Schema.define(version: 2021_12_16_023048) do
   add_foreign_key "cultivos", "fitosanitarios", column: "fitosanitarios_id"
   add_foreign_key "fitosanitarios", "actividads", column: "actividads_id"
   add_foreign_key "maquinaria", "actividads", column: "actividads_id"
+  add_foreign_key "marca_maquinaria", "maquinaria", column: "maquinaria_id"
   add_foreign_key "registro_mantencions", "maquinaria", column: "maquinaria_id"
   add_foreign_key "registro_mantencions", "tipo_mantencions", column: "tipo_mantencions_id"
   add_foreign_key "representacions", "explotacions", column: "explotacions_id"

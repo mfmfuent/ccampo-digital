@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @marca_maquinarium.marca %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @marca_maquinarium.modelo %>
+</p>
+
+<p>
+  <strong>Fecha fabricacion:</strong>
+  <%= @marca_maquinarium.fecha_fabricacion %>
+</p>
+
+<p>
+  <strong>Maquinaria:</strong>
+  <%= @marca_maquinarium.maquinaria_id %>
+</p>
+
+<%= link_to 'Edit', edit_marca_maquinarium_path(@marca_maquinarium) %> |
+<%= link_to 'Back', marca_maquinaria_path %>
