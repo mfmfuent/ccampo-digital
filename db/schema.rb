@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_021452) do
+ActiveRecord::Schema.define(version: 2021_12_16_021703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,6 +90,26 @@ ActiveRecord::Schema.define(version: 2021_12_16_021452) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "fitosanitarios", force: :cascade do |t|
+    t.string "nombre"
+    t.string "registro"
+    t.string "funcion"
+    t.string "fabricante"
+    t.date "fecha_caducidad"
+    t.string "ambito_utilizacion"
+    t.float "unidades"
+    t.float "litros_caldo_defecto"
+    t.string "cultivo"
+    t.float "dosis"
+    t.float "unidades_dosis"
+    t.string "periodo_seguridad"
+    t.binary "ficha_tecnica"
+    t.bigint "actividads_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["actividads_id"], name: "index_fitosanitarios_on_actividads_id"
+  end
+
   create_table "representacions", force: :cascade do |t|
     t.string "nombre"
     t.string "descripcion"
@@ -145,6 +165,7 @@ ActiveRecord::Schema.define(version: 2021_12_16_021452) do
   add_foreign_key "actividad_paras", "actividads", column: "actividads_id"
   add_foreign_key "asesors", "explotacions", column: "explotacions_id"
   add_foreign_key "campos", "explotacions", column: "explotacions_id"
+  add_foreign_key "fitosanitarios", "actividads", column: "actividads_id"
   add_foreign_key "representacions", "explotacions", column: "explotacions_id"
   add_foreign_key "representacions", "representantes", column: "representantes_id"
   add_foreign_key "representantes", "explotacions", column: "explotacions_id"

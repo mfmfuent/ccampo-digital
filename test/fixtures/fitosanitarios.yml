@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  registro: MyString
+  funcion: MyString
+  fabricante: MyString
+  fecha_caducidad: 2021-12-15
+  ambito_utilizacion: MyString
+  unidades: 1.5
+  litros_caldo_defecto: 1.5
+  cultivo: MyString
+  dosis: 1.5
+  unidades_dosis: 1.5
+  periodo_seguridad: MyString
+  ficha_tecnica: 
+  actividads: one
+
+two:
+  nombre: MyString
+  registro: MyString
+  funcion: MyString
+  fabricante: MyString
+  fecha_caducidad: 2021-12-15
+  ambito_utilizacion: MyString
+  unidades: 1.5
+  litros_caldo_defecto: 1.5
+  cultivo: MyString
+  dosis: 1.5
+  unidades_dosis: 1.5
+  periodo_seguridad: MyString
+  ficha_tecnica: 
+  actividads: two

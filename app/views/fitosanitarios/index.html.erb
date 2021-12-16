@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fitosanitarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Registro</th>
+      <th>Funcion</th>
+      <th>Fabricante</th>
+      <th>Fecha caducidad</th>
+      <th>Ambito utilizacion</th>
+      <th>Unidades</th>
+      <th>Litros caldo defecto</th>
+      <th>Cultivo</th>
+      <th>Dosis</th>
+      <th>Unidades dosis</th>
+      <th>Periodo seguridad</th>
+      <th>Ficha tecnica</th>
+      <th>Actividads</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fitosanitarios.each do |fitosanitario| %>
+      <tr>
+        <td><%= fitosanitario.nombre %></td>
+        <td><%= fitosanitario.registro %></td>
+        <td><%= fitosanitario.funcion %></td>
+        <td><%= fitosanitario.fabricante %></td>
+        <td><%= fitosanitario.fecha_caducidad %></td>
+        <td><%= fitosanitario.ambito_utilizacion %></td>
+        <td><%= fitosanitario.unidades %></td>
+        <td><%= fitosanitario.litros_caldo_defecto %></td>
+        <td><%= fitosanitario.cultivo %></td>
+        <td><%= fitosanitario.dosis %></td>
+        <td><%= fitosanitario.unidades_dosis %></td>
+        <td><%= fitosanitario.periodo_seguridad %></td>
+        <td><%= fitosanitario.ficha_tecnica %></td>
+        <td><%= fitosanitario.actividads_id %></td>
+        <td><%= link_to 'Show', fitosanitario %></td>
+        <td><%= link_to 'Edit', edit_fitosanitario_path(fitosanitario) %></td>
+        <td><%= link_to 'Destroy', fitosanitario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fitosanitario', new_fitosanitario_path %>

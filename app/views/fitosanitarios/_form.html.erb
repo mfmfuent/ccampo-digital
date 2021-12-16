@@ -1,0 +1,87 @@
+<%= form_with(model: fitosanitario) do |form| %>
+  <% if fitosanitario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fitosanitario.errors.count, "error") %> prohibited this fitosanitario from being saved:</h2>
+
+      <ul>
+        <% fitosanitario.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :registro %>
+    <%= form.text_field :registro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :funcion %>
+    <%= form.text_field :funcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fabricante %>
+    <%= form.text_field :fabricante %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_caducidad %>
+    <%= form.date_select :fecha_caducidad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ambito_utilizacion %>
+    <%= form.text_field :ambito_utilizacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unidades %>
+    <%= form.text_field :unidades %>
+  </div>
+
+  <div class="field">
+    <%= form.label :litros_caldo_defecto %>
+    <%= form.text_field :litros_caldo_defecto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cultivo %>
+    <%= form.text_field :cultivo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dosis %>
+    <%= form.text_field :dosis %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unidades_dosis %>
+    <%= form.text_field :unidades_dosis %>
+  </div>
+
+  <div class="field">
+    <%= form.label :periodo_seguridad %>
+    <%= form.text_field :periodo_seguridad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ficha_tecnica %>
+    <%= form.text_field :ficha_tecnica %>
+  </div>
+
+  <div class="field">
+    <%= form.label :actividads_id %>
+    <%= form.text_field :actividads_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

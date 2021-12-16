@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :fitosanitarios
   resources :actividad_paras
   resources :actividads
   resources :representacions
