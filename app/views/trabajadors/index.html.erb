@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Trabajadors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Tipo trabajador</th>
+      <th>Rut</th>
+      <th>Carnet aplicador</th>
+      <th>Calificacion</th>
+      <th>Asesor</th>
+      <th>Email</th>
+      <th>Telefono</th>
+      <th>Direccion</th>
+      <th>Localidad</th>
+      <th>Comuna</th>
+      <th>Region</th>
+      <th>Pais</th>
+      <th>Foto</th>
+      <th>Comentarios</th>
+      <th>Tipo trabajadors</th>
+      <th>Actividads</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trabajadors.each do |trabajador| %>
+      <tr>
+        <td><%= trabajador.nombre %></td>
+        <td><%= trabajador.tipo_trabajador %></td>
+        <td><%= trabajador.rut %></td>
+        <td><%= trabajador.carnet_aplicador %></td>
+        <td><%= trabajador.calificacion %></td>
+        <td><%= trabajador.asesor %></td>
+        <td><%= trabajador.email %></td>
+        <td><%= trabajador.telefono %></td>
+        <td><%= trabajador.direccion %></td>
+        <td><%= trabajador.localidad %></td>
+        <td><%= trabajador.comuna %></td>
+        <td><%= trabajador.region %></td>
+        <td><%= trabajador.pais %></td>
+        <td><%= trabajador.foto %></td>
+        <td><%= trabajador.comentarios %></td>
+        <td><%= trabajador.tipo_trabajadors_id %></td>
+        <td><%= trabajador.actividads_id %></td>
+        <td><%= link_to 'Show', trabajador %></td>
+        <td><%= link_to 'Edit', edit_trabajador_path(trabajador) %></td>
+        <td><%= link_to 'Destroy', trabajador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trabajador', new_trabajador_path %>

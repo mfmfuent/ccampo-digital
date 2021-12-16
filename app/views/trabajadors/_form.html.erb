@@ -1,0 +1,102 @@
+<%= form_with(model: trabajador) do |form| %>
+  <% if trabajador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(trabajador.errors.count, "error") %> prohibited this trabajador from being saved:</h2>
+
+      <ul>
+        <% trabajador.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_trabajador %>
+    <%= form.text_field :tipo_trabajador %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rut %>
+    <%= form.text_field :rut %>
+  </div>
+
+  <div class="field">
+    <%= form.label :carnet_aplicador %>
+    <%= form.text_field :carnet_aplicador %>
+  </div>
+
+  <div class="field">
+    <%= form.label :calificacion %>
+    <%= form.text_field :calificacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :asesor %>
+    <%= form.text_field :asesor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefono %>
+    <%= form.text_field :telefono %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :localidad %>
+    <%= form.text_field :localidad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comuna %>
+    <%= form.text_field :comuna %>
+  </div>
+
+  <div class="field">
+    <%= form.label :region %>
+    <%= form.text_field :region %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pais %>
+    <%= form.text_field :pais %>
+  </div>
+
+  <div class="field">
+    <%= form.label :foto %>
+    <%= form.text_field :foto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comentarios %>
+    <%= form.text_area :comentarios %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_trabajadors_id %>
+    <%= form.text_field :tipo_trabajadors_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :actividads_id %>
+    <%= form.text_field :actividads_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  tipo_trabajador: MyString
+  rut: MyString
+  carnet_aplicador: MyString
+  calificacion: MyString
+  asesor: MyString
+  email: MyString
+  telefono: MyString
+  direccion: MyString
+  localidad: MyString
+  comuna: MyString
+  region: MyString
+  pais: MyString
+  foto: 
+  comentarios: MyText
+  tipo_trabajadors: one
+  actividads: one
+
+two:
+  nombre: MyString
+  tipo_trabajador: MyString
+  rut: MyString
+  carnet_aplicador: MyString
+  calificacion: MyString
+  asesor: MyString
+  email: MyString
+  telefono: MyString
+  direccion: MyString
+  localidad: MyString
+  comuna: MyString
+  region: MyString
+  pais: MyString
+  foto: 
+  comentarios: MyText
+  tipo_trabajadors: two
+  actividads: two

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_022032) do
+ActiveRecord::Schema.define(version: 2021_12_16_022121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -169,6 +169,30 @@ ActiveRecord::Schema.define(version: 2021_12_16_022032) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "trabajadors", force: :cascade do |t|
+    t.string "nombre"
+    t.string "tipo_trabajador"
+    t.string "rut"
+    t.string "carnet_aplicador"
+    t.string "calificacion"
+    t.string "asesor"
+    t.string "email"
+    t.string "telefono"
+    t.string "direccion"
+    t.string "localidad"
+    t.string "comuna"
+    t.string "region"
+    t.string "pais"
+    t.binary "foto"
+    t.text "comentarios"
+    t.bigint "tipo_trabajadors_id", null: false
+    t.bigint "actividads_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["actividads_id"], name: "index_trabajadors_on_actividads_id"
+    t.index ["tipo_trabajadors_id"], name: "index_trabajadors_on_tipo_trabajadors_id"
+  end
+
   create_table "trabajos", force: :cascade do |t|
     t.string "nombre"
     t.text "descripcion"
@@ -210,5 +234,7 @@ ActiveRecord::Schema.define(version: 2021_12_16_022032) do
   add_foreign_key "representacions", "explotacions", column: "explotacions_id"
   add_foreign_key "representacions", "representantes", column: "representantes_id"
   add_foreign_key "representantes", "explotacions", column: "explotacions_id"
+  add_foreign_key "trabajadors", "actividads", column: "actividads_id"
+  add_foreign_key "trabajadors", "tipo_trabajadors", column: "tipo_trabajadors_id"
   add_foreign_key "trabajos", "actividads", column: "actividads_id"
 end
