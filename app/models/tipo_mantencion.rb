@@ -1,0 +1,2 @@
+class TipoMantencion < ApplicationRecord
+end

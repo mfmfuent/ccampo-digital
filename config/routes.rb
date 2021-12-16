@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :tipo_mantencions
   resources :calificacions
   resources :trabajadors
   resources :tipo_trabajadors
