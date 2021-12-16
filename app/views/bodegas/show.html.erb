@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @bodega.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @bodega.descripcion %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @bodega.direccion %>
+</p>
+
+<p>
+  <strong>Comuna:</strong>
+  <%= @bodega.comuna %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @bodega.region %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @bodega.pais %>
+</p>
+
+<p>
+  <strong>Actividads:</strong>
+  <%= @bodega.actividads_id %>
+</p>
+
+<%= link_to 'Edit', edit_bodega_path(@bodega) %> |
+<%= link_to 'Back', bodegas_path %>
