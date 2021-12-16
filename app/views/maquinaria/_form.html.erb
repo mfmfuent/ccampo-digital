@@ -1,0 +1,52 @@
+<%= form_with(model: maquinarium) do |form| %>
+  <% if maquinarium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(maquinarium.errors.count, "error") %> prohibited this maquinarium from being saved:</h2>
+
+      <ul>
+        <% maquinarium.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_maquinaria %>
+    <%= form.text_field :tipo_maquinaria %>
+  </div>
+
+  <div class="field">
+    <%= form.label :marca %>
+    <%= form.text_field :marca %>
+  </div>
+
+  <div class="field">
+    <%= form.label :modelo %>
+    <%= form.text_field :modelo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alquilada %>
+    <%= form.text_field :alquilada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :actividads_id %>
+    <%= form.text_field :actividads_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

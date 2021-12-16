@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_022305) do
+ActiveRecord::Schema.define(version: 2021_12_16_022402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -143,6 +143,19 @@ ActiveRecord::Schema.define(version: 2021_12_16_022305) do
     t.index ["actividads_id"], name: "index_fitosanitarios_on_actividads_id"
   end
 
+  create_table "maquinaria", force: :cascade do |t|
+    t.string "nombre"
+    t.string "descripcion"
+    t.string "tipo_maquinaria"
+    t.string "marca"
+    t.string "modelo"
+    t.binary "alquilada"
+    t.bigint "actividads_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["actividads_id"], name: "index_maquinaria_on_actividads_id"
+  end
+
   create_table "representacions", force: :cascade do |t|
     t.string "nombre"
     t.string "descripcion"
@@ -249,6 +262,7 @@ ActiveRecord::Schema.define(version: 2021_12_16_022305) do
   add_foreign_key "cultivos", "actividads", column: "actividads_id"
   add_foreign_key "cultivos", "fitosanitarios", column: "fitosanitarios_id"
   add_foreign_key "fitosanitarios", "actividads", column: "actividads_id"
+  add_foreign_key "maquinaria", "actividads", column: "actividads_id"
   add_foreign_key "representacions", "explotacions", column: "explotacions_id"
   add_foreign_key "representacions", "representantes", column: "representantes_id"
   add_foreign_key "representantes", "explotacions", column: "explotacions_id"

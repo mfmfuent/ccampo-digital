@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Maquinaria</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Tipo maquinaria</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Alquilada</th>
+      <th>Actividads</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @maquinaria.each do |maquinarium| %>
+      <tr>
+        <td><%= maquinarium.nombre %></td>
+        <td><%= maquinarium.descripcion %></td>
+        <td><%= maquinarium.tipo_maquinaria %></td>
+        <td><%= maquinarium.marca %></td>
+        <td><%= maquinarium.modelo %></td>
+        <td><%= maquinarium.alquilada %></td>
+        <td><%= maquinarium.actividads_id %></td>
+        <td><%= link_to 'Show', maquinarium %></td>
+        <td><%= link_to 'Edit', edit_maquinarium_path(maquinarium) %></td>
+        <td><%= link_to 'Destroy', maquinarium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Maquinarium', new_maquinarium_path %>

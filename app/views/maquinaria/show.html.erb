@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @maquinarium.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @maquinarium.descripcion %>
+</p>
+
+<p>
+  <strong>Tipo maquinaria:</strong>
+  <%= @maquinarium.tipo_maquinaria %>
+</p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @maquinarium.marca %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @maquinarium.modelo %>
+</p>
+
+<p>
+  <strong>Alquilada:</strong>
+  <%= @maquinarium.alquilada %>
+</p>
+
+<p>
+  <strong>Actividads:</strong>
+  <%= @maquinarium.actividads_id %>
+</p>
+
+<%= link_to 'Edit', edit_maquinarium_path(@maquinarium) %> |
+<%= link_to 'Back', maquinaria_path %>
