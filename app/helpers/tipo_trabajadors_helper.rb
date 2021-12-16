@@ -1,0 +1,2 @@
+module TipoTrabajadorsHelper
+end

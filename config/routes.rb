@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :tipo_trabajadors
   resources :cultivos
   resources :bodegas
   resources :trabajos
