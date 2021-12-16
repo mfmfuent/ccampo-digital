@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @registro_mantencion.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @registro_mantencion.descripcion %>
+</p>
+
+<p>
+  <strong>Inspeccion oficial:</strong>
+  <%= @registro_mantencion.inspeccion_oficial %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @registro_mantencion.fecha %>
+</p>
+
+<p>
+  <strong>Costo:</strong>
+  <%= @registro_mantencion.costo %>
+</p>
+
+<p>
+  <strong>Factura:</strong>
+  <%= @registro_mantencion.factura %>
+</p>
+
+<p>
+  <strong>Tipo mantencions:</strong>
+  <%= @registro_mantencion.tipo_mantencions_id %>
+</p>
+
+<p>
+  <strong>Maquinaria:</strong>
+  <%= @registro_mantencion.maquinaria_id %>
+</p>
+
+<%= link_to 'Edit', edit_registro_mantencion_path(@registro_mantencion) %> |
+<%= link_to 'Back', registro_mantencions_path %>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :registro_mantencions
   resources :maquinaria
   resources :tipo_mantencions
   resources :calificacions

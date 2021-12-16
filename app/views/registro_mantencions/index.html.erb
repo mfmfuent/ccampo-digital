@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Registro Mantencions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Inspeccion oficial</th>
+      <th>Fecha</th>
+      <th>Costo</th>
+      <th>Factura</th>
+      <th>Tipo mantencions</th>
+      <th>Maquinaria</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @registro_mantencions.each do |registro_mantencion| %>
+      <tr>
+        <td><%= registro_mantencion.nombre %></td>
+        <td><%= registro_mantencion.descripcion %></td>
+        <td><%= registro_mantencion.inspeccion_oficial %></td>
+        <td><%= registro_mantencion.fecha %></td>
+        <td><%= registro_mantencion.costo %></td>
+        <td><%= registro_mantencion.factura %></td>
+        <td><%= registro_mantencion.tipo_mantencions_id %></td>
+        <td><%= registro_mantencion.maquinaria_id %></td>
+        <td><%= link_to 'Show', registro_mantencion %></td>
+        <td><%= link_to 'Edit', edit_registro_mantencion_path(registro_mantencion) %></td>
+        <td><%= link_to 'Destroy', registro_mantencion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Registro Mantencion', new_registro_mantencion_path %>
