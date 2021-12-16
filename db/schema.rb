@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_022121) do
+ActiveRecord::Schema.define(version: 2021_12_16_022210) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,16 @@ ActiveRecord::Schema.define(version: 2021_12_16_022121) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["actividads_id"], name: "index_bodegas_on_actividads_id"
+  end
+
+  create_table "calificacions", force: :cascade do |t|
+    t.string "nombre"
+    t.bigint "trabajadors_id", null: false
+    t.bigint "tipo_trabajadors_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tipo_trabajadors_id"], name: "index_calificacions_on_tipo_trabajadors_id"
+    t.index ["trabajadors_id"], name: "index_calificacions_on_trabajadors_id"
   end
 
   create_table "campos", force: :cascade do |t|
@@ -227,6 +237,8 @@ ActiveRecord::Schema.define(version: 2021_12_16_022121) do
   add_foreign_key "actividad_paras", "actividads", column: "actividads_id"
   add_foreign_key "asesors", "explotacions", column: "explotacions_id"
   add_foreign_key "bodegas", "actividads", column: "actividads_id"
+  add_foreign_key "calificacions", "tipo_trabajadors", column: "tipo_trabajadors_id"
+  add_foreign_key "calificacions", "trabajadors", column: "trabajadors_id"
   add_foreign_key "campos", "explotacions", column: "explotacions_id"
   add_foreign_key "cultivos", "actividads", column: "actividads_id"
   add_foreign_key "cultivos", "fitosanitarios", column: "fitosanitarios_id"

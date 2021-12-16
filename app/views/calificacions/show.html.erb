@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @calificacion.nombre %>
+</p>
+
+<p>
+  <strong>Trabajadors:</strong>
+  <%= @calificacion.trabajadors_id %>
+</p>
+
+<p>
+  <strong>Tipo trabajadors:</strong>
+  <%= @calificacion.tipo_trabajadors_id %>
+</p>
+
+<%= link_to 'Edit', edit_calificacion_path(@calificacion) %> |
+<%= link_to 'Back', calificacions_path %>
