@@ -1,15 +1,16 @@
-<h2>Forgot your password?</h2>
+<a href="index.html"><img src="<%= asset_path 'Worksystems Logo  (200 x 200 px).png'%>" class="avatar avatar-small mb-0 d-block mx-auto" alt=""></a>
+<h2>Olvidaste tu contraseña?</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+  <div class="form-floating mb-2">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "Instrucciones para restablecer la contraseña",class:"btn btn-primary w-100"  %>
   </div>
 <% end %>
 
