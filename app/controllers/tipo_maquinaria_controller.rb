@@ -1,4 +1,6 @@
 class TipoMaquinariaController < ApplicationController
+  layout "admin"
+  
   before_action :set_tipo_maquinarium, only: %i[ show edit update destroy ]
 
   # GET /tipo_maquinaria or /tipo_maquinaria.json

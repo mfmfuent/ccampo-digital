@@ -1,4 +1,6 @@
 class MaquinariaController < ApplicationController
+  layout "admin"
+  
   before_action :set_maquinarium, only: %i[ show edit update destroy ]
 
   # GET /maquinaria or /maquinaria.json

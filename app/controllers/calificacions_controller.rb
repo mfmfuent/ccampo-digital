@@ -1,4 +1,6 @@
 class CalificacionsController < ApplicationController
+  layout "admin"
+  
   before_action :set_calificacion, only: %i[ show edit update destroy ]
 
   # GET /calificacions or /calificacions.json

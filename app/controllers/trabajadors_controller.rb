@@ -1,4 +1,6 @@
 class TrabajadorsController < ApplicationController
+  layout "admin"
+  
   before_action :set_trabajador, only: %i[ show edit update destroy ]
 
   # GET /trabajadors or /trabajadors.json

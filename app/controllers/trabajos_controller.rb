@@ -1,4 +1,6 @@
 class TrabajosController < ApplicationController
+  layout "admin"
+  
   before_action :set_trabajo, only: %i[ show edit update destroy ]
 
   # GET /trabajos or /trabajos.json

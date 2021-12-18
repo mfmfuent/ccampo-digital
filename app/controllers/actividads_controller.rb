@@ -1,4 +1,6 @@
 class ActividadsController < ApplicationController
+  layout "admin"
+
   before_action :set_actividad, only: %i[ show edit update destroy ]
 
   # GET /actividads or /actividads.json

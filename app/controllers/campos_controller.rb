@@ -1,4 +1,6 @@
 class CamposController < ApplicationController
+  layout "admin"
+  
   before_action :set_campo, only: %i[ show edit update destroy ]
 
   # GET /campos or /campos.json

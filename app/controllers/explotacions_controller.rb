@@ -1,4 +1,6 @@
 class ExplotacionsController < ApplicationController
+  layout "admin"
+  
   before_action :set_explotacion, only: %i[ show edit update destroy ]
 
   # GET /explotacions or /explotacions.json

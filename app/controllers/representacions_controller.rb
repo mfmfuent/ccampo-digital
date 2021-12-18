@@ -1,4 +1,6 @@
 class RepresentacionsController < ApplicationController
+  layout "admin"
+  
   before_action :set_representacion, only: %i[ show edit update destroy ]
 
   # GET /representacions or /representacions.json

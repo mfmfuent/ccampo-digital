@@ -1,4 +1,6 @@
 class MarcaMaquinariaController < ApplicationController
+  layout "admin"
+  
   before_action :set_marca_maquinarium, only: %i[ show edit update destroy ]
 
   # GET /marca_maquinaria or /marca_maquinaria.json

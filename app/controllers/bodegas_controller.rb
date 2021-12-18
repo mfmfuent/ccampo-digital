@@ -1,4 +1,6 @@
 class BodegasController < ApplicationController
+  layout "admin"
+
   before_action :set_bodega, only: %i[ show edit update destroy ]
 
   # GET /bodegas or /bodegas.json

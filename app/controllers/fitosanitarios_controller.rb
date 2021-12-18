@@ -1,4 +1,6 @@
 class FitosanitariosController < ApplicationController
+  layout "admin"
+  
   before_action :set_fitosanitario, only: %i[ show edit update destroy ]
 
   # GET /fitosanitarios or /fitosanitarios.json

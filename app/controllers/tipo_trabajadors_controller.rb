@@ -1,4 +1,6 @@
 class TipoTrabajadorsController < ApplicationController
+  layout "admin"
+  
   before_action :set_tipo_trabajador, only: %i[ show edit update destroy ]
 
   # GET /tipo_trabajadors or /tipo_trabajadors.json

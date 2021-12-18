@@ -1,4 +1,6 @@
 class AsesorsController < ApplicationController
+  layout "admin"
+
   before_action :set_asesor, only: %i[ show edit update destroy ]
 
   # GET /asesors or /asesors.json

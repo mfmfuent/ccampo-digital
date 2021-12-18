@@ -1,4 +1,6 @@
 class TipoMantencionsController < ApplicationController
+  layout "admin"
+  
   before_action :set_tipo_mantencion, only: %i[ show edit update destroy ]
 
   # GET /tipo_mantencions or /tipo_mantencions.json

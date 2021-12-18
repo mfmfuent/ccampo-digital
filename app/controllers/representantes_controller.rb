@@ -1,4 +1,6 @@
 class RepresentantesController < ApplicationController
+  layout "admin"
+  
   before_action :set_representante, only: %i[ show edit update destroy ]
 
   # GET /representantes or /representantes.json

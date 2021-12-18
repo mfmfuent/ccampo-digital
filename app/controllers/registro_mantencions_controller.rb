@@ -1,4 +1,6 @@
 class RegistroMantencionsController < ApplicationController
+  layout "admin"
+  
   before_action :set_registro_mantencion, only: %i[ show edit update destroy ]
 
   # GET /registro_mantencions or /registro_mantencions.json

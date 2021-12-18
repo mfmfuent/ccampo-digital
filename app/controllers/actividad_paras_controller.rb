@@ -1,4 +1,6 @@
 class ActividadParasController < ApplicationController
+  layout "admin"
+
   before_action :set_actividad_para, only: %i[ show edit update destroy ]
 
   # GET /actividad_paras or /actividad_paras.json

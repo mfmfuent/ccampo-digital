@@ -1,4 +1,6 @@
 class CultivosController < ApplicationController
+  layout "admin"
+  
   before_action :set_cultivo, only: %i[ show edit update destroy ]
 
   # GET /cultivos or /cultivos.json
