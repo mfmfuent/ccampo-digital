@@ -1,6 +1,11 @@
-<h1>Editing Maquinarium</h1>
+<script src="https://worksystems.cl/jsproject/bootstrap.bundle.min.js"></script>
+    <div class="table-responsive">
+        <h1>Editar Maquinaria</h1>
 
-<%= render 'form', maquinarium: @maquinarium %>
+        <%= render 'form', maquinarium: @maquinarium %>
 
-<%= link_to 'Show', @maquinarium %> |
-<%= link_to 'Back', maquinaria_path %>
+        <div class="actions">
+            <div class="actions">
+            <%= link_to 'Volver', maquinaria_path, :class => "btn btn-primary text-decoration-none" %>
+        </div>
+    </div>

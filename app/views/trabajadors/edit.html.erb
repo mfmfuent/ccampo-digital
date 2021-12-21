@@ -1,6 +1,10 @@
-<h1>Editing Trabajador</h1>
+<script src="https://worksystems.cl/jsproject/bootstrap.bundle.min.js"></script>
+    <div class="table-responsive">
+        <h1>Edita Trabajador</h1>
 
-<%= render 'form', trabajador: @trabajador %>
+        <%= render 'form', trabajador: @trabajador %>
 
-<%= link_to 'Show', @trabajador %> |
-<%= link_to 'Back', trabajadors_path %>
+        <div class="actions">
+            <%= link_to 'Volver', trabajadors_path, :class => "btn btn-primary text-decoration-none" %>
+        </div>
+    </div>

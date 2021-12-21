@@ -1,8 +1,13 @@
-<p id="notice"><%= notice %></p>
+<script src="../assets/config/bootstrap.bundle.min.js"></script>
+<div class="card shadow mb-4">
+        <div class="card-header py-3">
+                            <h3 class="m-0 font-weight-bold text-primary">Explotaciones</h3>
+                            <%= link_to 'Nueva Explotacion', new_explotacion_path, :class => "btn btn-primary text-decoration-none" %>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 
-<h1>Explotacions</h1>
-
-<table>
   <thead>
     <tr>
       <th>Nombre explotacion</th>
@@ -36,14 +41,18 @@
         <td><%= explotacion.thumbnail %></td>
         <td><%= explotacion.image %></td>
         <td><%= explotacion.nacional %></td>
-        <td><%= link_to 'Show', explotacion %></td>
-        <td><%= link_to 'Edit', edit_explotacion_path(explotacion) %></td>
-        <td><%= link_to 'Destroy', explotacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', explotacion, :class => "btn btn-primary text-decoration-none" %></td>
+        <td><%= link_to 'Editar', edit_explotacion_path(explotacion), :class => "btn btn-primary text-decoration-none" %></td>
+        <td><%= link_to 'Eliminar', explotacion, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary text-decoration-none" %></td>
       </tr>
     <% end %>
   </tbody>
+
+
 </table>
+                            </div>
+                        </div>
+      </div>
 
-<br>
-
-<%= link_to 'New Explotacion', new_explotacion_path %>
+</div>
+                <!-- /.container-fluid -->

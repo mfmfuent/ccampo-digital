@@ -11,67 +11,99 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nombre_explotacion %>
-    <%= form.text_field :nombre_explotacion %>
+  <div class="col-6 mt-2">
+    <%= form.label :nombre_explotacion, class: "form-label" %>
+    <%= form.text_field :nombre_explotacion, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Nombre requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :rut %>
-    <%= form.text_field :rut %>
+  <div class="col-6 mt-2">
+    <%= form.label :rut, class: "form-label" %>
+    <%= form.text_field :rut, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Rut requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+  <div class="col-6 mt-2">
+    <%= form.label :email, class: "form-label" %>
+    <%= form.text_field :email, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Email requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :direccion %>
-    <%= form.text_field :direccion %>
+  <div class="col-6 mt-2">
+    <%= form.label :direccion, class: "form-label" %>
+    <%= form.text_field :direccion, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Dirección requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :telefono %>
-    <%= form.text_field :telefono %>
+  <div class="col-6 mt-2">
+    <%= form.label :telefono, class: "form-label" %>
+    <%= form.text_field :telefono, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Telefono requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :localidad %>
-    <%= form.text_field :localidad %>
+  <div class="col-6 mt-2">
+    <%= form.label :localidad, class: "form-label" %>
+    <%= form.text_field :localidad, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Localidad requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :comuna %>
-    <%= form.text_field :comuna %>
+  <div class="col-6 mt-2">
+    <%= form.label :comuna, class: "form-label" %>
+    <%= form.text_field :comuna, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Comuna requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :region %>
-    <%= form.text_field :region %>
+  <div class="col-6 mt-2">
+    <%= form.label :region, class: "form-label" %>
+    <%= form.text_field :region, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Región requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :pais %>
-    <%= form.text_field :pais %>
+  <div class="col-6 mt-2">
+    <%= form.label :pais, class: "form-label" %>
+    <%= form.text_field :pais, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         País requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :thumbnail %>
-    <%= form.text_field :thumbnail %>
+  <div class="col-6 mt-2">
+    <%= form.label :thumbnail, class: "form-label" %>
+    <%= form.text_field :thumbnail, class: "form-control" %>
+    
   </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image %>
+  <div class="col-6 mt-2">
+    <%= form.label :image, class: "form-label" %>
+    <%= form.text_field :image, class: "form-control" %>
+    
   </div>
 
-  <div class="field">
-    <%= form.label :nacional %>
-    <%= form.text_field :nacional %>
+  <div class="col-6 mt-2">
+    <%= form.label :nacional, class: "form-label" %>
+    <%= form.text_field :nacional, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Nacional requerido.
+    </div>
   </div>
-
+<br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Crear Explotación", :class => "btn btn-primary text-decoration-none" %>
   </div>
 <% end %>

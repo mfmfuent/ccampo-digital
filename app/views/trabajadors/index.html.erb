@@ -1,8 +1,13 @@
-<p id="notice"><%= notice %></p>
+<script src="https://worksystems.cl/jsproject/bootstrap.bundle.min.js"></script>
+<div class="card shadow mb-4">
+        <div class="card-header py-3">
+                            <h3 class="m-0 font-weight-bold text-primary">Trabajadores</h3>
+                            <%= link_to 'Nuevo Trabajador', new_trabajador_path, :class => "btn btn-primary text-decoration-none" %>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 
-<h1>Trabajadors</h1>
-
-<table>
   <thead>
     <tr>
       <th>Nombre</th>
@@ -46,14 +51,18 @@
         <td><%= trabajador.comentarios %></td>
         <td><%= trabajador.tipo_trabajadors_id %></td>
         <td><%= trabajador.actividads_id %></td>
-        <td><%= link_to 'Show', trabajador %></td>
-        <td><%= link_to 'Edit', edit_trabajador_path(trabajador) %></td>
-        <td><%= link_to 'Destroy', trabajador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', trabajador, :class => "btn btn-primary text-decoration-none" %></td>
+        <td><%= link_to 'Editar', edit_trabajador_path(trabajador), :class => "btn btn-primary text-decoration-none" %></td>
+        <td><%= link_to 'Eliminar', trabajador, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary text-decoration-none" %></td>
       </tr>
     <% end %>
   </tbody>
-</table>
-
 <br>
+                        
+                        </table>
+                            </div>
+                        </div>
+      </div>
 
-<%= link_to 'New Trabajador', new_trabajador_path %>
+</div>
+                <!-- /.container-fluid -->

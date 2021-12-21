@@ -1,8 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Campos</h1>
-
-<table>
+<script src="https://worksystems.cl/jsproject/bootstrap.bundle.min.js"></script>
+<div class="card shadow mb-4">
+        <div class="card-header py-3">
+                            <h3 class="m-0 font-weight-bold text-primary">Campos</h3>
+                            <%= link_to 'Nuevo Campo', new_campo_path, :class => "btn btn-primary text-decoration-none" %>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -18,14 +22,19 @@
         <td><%= campo.nombre %></td>
         <td><%= campo.superficie %></td>
         <td><%= campo.explotacions_id %></td>
-        <td><%= link_to 'Show', campo %></td>
-        <td><%= link_to 'Edit', edit_campo_path(campo) %></td>
-        <td><%= link_to 'Destroy', campo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', campo, :class => "btn btn-primary text-decoration-none" %></td>
+        <td><%= link_to 'Editar', edit_campo_path(campo), :class => "btn btn-primary text-decoration-none" %></td>
+        <td><%= link_to 'Eliminar', campo, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary text-decoration-none" %></td>
       </tr>
     <% end %>
   </tbody>
-</table>
 
 <br>
+                        
+                        </table>
+                            </div>
+                        </div>
+      </div>
 
-<%= link_to 'New Campo', new_campo_path %>
+</div>
+                <!-- /.container-fluid -->

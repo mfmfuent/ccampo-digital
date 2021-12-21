@@ -1,5 +1,12 @@
-<h1>New Campo</h1>
+<script src="https://worksystems.cl/jsproject/bootstrap.bundle.min.js"></script>
+<div class="table-responsive">
+    <h1>Nuevo Campo</h1>
 
-<%= render 'form', campo: @campo %>
+        <table class="table table-striped table-sm">
+        <%= render 'form', campo: @campo %>
+        </table>
 
-<%= link_to 'Back', campos_path %>
+            <div class="actions">
+                <%= link_to 'Volver', campos_path, :class => "btn btn-primary text-decoration-none" %>
+            </div>
+</div>

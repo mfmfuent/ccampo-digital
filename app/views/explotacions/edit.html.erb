@@ -1,6 +1,11 @@
-<h1>Editing Explotacion</h1>
+<script src="https://worksystems.cl/jsproject/bootstrap.bundle.min.js"></script>
+<div class="table-responsive">
+    <h1>Editar Explotacion</h1>
 
-<%= render 'form', explotacion: @explotacion %>
+    <%= render 'form', explotacion: @explotacion %>
 
-<%= link_to 'Show', @explotacion %> |
-<%= link_to 'Back', explotacions_path %>
+    <div class="actions">
+        <%= link_to 'Volver', explotacions_path, :class => "btn btn-primary text-decoration-none" %>
+    </div>
+</div>
+

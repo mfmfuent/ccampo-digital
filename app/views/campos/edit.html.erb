@@ -1,6 +1,10 @@
-<h1>Editing Campo</h1>
+<script src="https://worksystems.cl/jsproject/bootstrap.bundle.min.js"></script>
+<div class="table-responsive">
+    <h1>Editar Campo</h1>
 
-<%= render 'form', campo: @campo %>
+        <%= render 'form', campo: @campo %>
 
-<%= link_to 'Show', @campo %> |
-<%= link_to 'Back', campos_path %>
+    <div class="actions">
+        <%= link_to 'Volver', campos_path, :class => "btn btn-primary text-decoration-none" %>
+    </div>
+</div>

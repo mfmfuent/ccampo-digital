@@ -1,8 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Maquinaria</h1>
-
-<table>
+<script src="https://worksystems.cl/jsproject/bootstrap.bundle.min.js"></script>
+<div class="card shadow mb-4">
+        <div class="card-header py-3">
+                            <h3 class="m-0 font-weight-bold text-primary">Maquinarias</h3>
+                            <%= link_to 'Nueva Maquinaria', new_maquinarium_path, :class => "btn btn-primary text-decoration-none" %>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -26,14 +30,18 @@
         <td><%= maquinarium.modelo %></td>
         <td><%= maquinarium.alquilada %></td>
         <td><%= maquinarium.actividads_id %></td>
-        <td><%= link_to 'Show', maquinarium %></td>
-        <td><%= link_to 'Edit', edit_maquinarium_path(maquinarium) %></td>
-        <td><%= link_to 'Destroy', maquinarium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', maquinarium, :class => "btn btn-primary text-decoration-none" %></td>
+        <td><%= link_to 'Editar', edit_maquinarium_path(maquinarium), :class => "btn btn-primary text-decoration-none" %></td>
+        <td><%= link_to 'Eliminar', maquinarium, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary text-decoration-none" %></td>
       </tr>
     <% end %>
   </tbody>
-</table>
-
 <br>
+                        
+                        </table>
+                            </div>
+                        </div>
+      </div>
 
-<%= link_to 'New Maquinarium', new_maquinarium_path %>
+</div>
+                <!-- /.container-fluid -->
