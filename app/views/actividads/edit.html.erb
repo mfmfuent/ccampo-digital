@@ -1,6 +1,7 @@
-<h1>Editing Actividad</h1>
+<h1>Editar Actividad</h1>
 
 <%= render 'form', actividad: @actividad %>
 
-<%= link_to 'Show', @actividad %> |
-<%= link_to 'Back', actividads_path %>
+<div class="actions">
+    <%= link_to 'Volver', actividads_path, :class => "btn btn-primary text-decoration-none" %>
+</div>

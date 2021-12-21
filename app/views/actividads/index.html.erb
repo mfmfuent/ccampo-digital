@@ -1,67 +1,79 @@
-<p id="notice"><%= notice %></p>
+<script src="../assets/config/bootstrap.bundle.min.js"></script>
+<div class="card shadow mb-4">
+        <div class="card-header py-3">
+                            <h3 class="m-0 font-weight-bold text-primary">Actividades</h3>
+                            <%= link_to 'Nueva Actividad', new_actividad_path, :class => "btn btn-primary text-decoration-none" %>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                          
+                        
+                          <thead>
+                            <tr>
+                              <th>Actividad Para</th>
+                              <th>Trabajo</th>
+                              <th>Fecha</th>
+                              <th>Campo</th>
+                              <th>Fitosanitario</th>
+                              <th>Dosis</th>
+                              <th>Cantidad</th>
+                              <th>Litros caldo</th>
+                              <th>Plaga</th>
+                              <th>Justifica tratamiento</th>
+                              <th>N° lote</th>
+                              <th>Bodega</th>
+                              <th>Det med no quimica</th>
+                              <th>Tipo actuación</th>
+                              <th>Intensidad actuación</th>
+                              <th>Fecha de actuación</th>
+                              <th>Trabajador</th>
+                              <th>Maquina</th>
+                              <th>Horas</th>
+                              <th>Minutos</th>
+                              <th>Notas</th>
+                              <th colspan="3"></th>
+                            </tr>
+                          </thead>
 
-<h1>Actividads</h1>
+                          <tbody>
+                            <% @actividads.each do |actividad| %>
+                              <tr>
+                                <td><%= actividad.act_para %></td>
+                                <td><%= actividad.trabajo %></td>
+                                <td><%= actividad.fecha %></td>
+                                <td><%= actividad.campo %></td>
+                                <td><%= actividad.fitosanitario %></td>
+                                <td><%= actividad.dosis %></td>
+                                <td><%= actividad.cantidad %></td>
+                                <td><%= actividad.litros_caldo %></td>
+                                <td><%= actividad.plaga %></td>
+                                <td><%= actividad.justifica_tratamiento %></td>
+                                <td><%= actividad.numero_lote %></td>
+                                <td><%= actividad.bodega %></td>
+                                <td><%= actividad.det_med_no_quimica %></td>
+                                <td><%= actividad.tipo_actuacion %></td>
+                                <td><%= actividad.intensidad_actuacion %></td>
+                                <td><%= actividad.fecha_actuacion %></td>
+                                <td><%= actividad.trabajador %></td>
+                                <td><%= actividad.maquina %></td>
+                                <td><%= actividad.horas %></td>
+                                <td><%= actividad.minutos %></td>
+                                <td><%= actividad.notas %></td>
+                                <td><%= link_to 'Mostrar', actividad , :class => "btn btn-primary text-decoration-none"%></td>
+                                <td><%= link_to 'Editar', edit_actividad_path(actividad), :class => "btn btn-primary text-decoration-none" %></td>
+                                <td><%= link_to 'Eliminar', actividad, method: :delete, data: { confirm: 'Estas seguro?' }, :class => "btn btn-primary text-decoration-none" %></td>
+                              </tr>
+                            <% end %>
+                          </tbody>
+                        </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Act para</th>
-      <th>Trabajo</th>
-      <th>Fecha</th>
-      <th>Campo</th>
-      <th>Fitosanitario</th>
-      <th>Dosis</th>
-      <th>Cantidad</th>
-      <th>Litros caldo</th>
-      <th>Plaga</th>
-      <th>Justifica tratamiento</th>
-      <th>Numero lote</th>
-      <th>Bodega</th>
-      <th>Det med no quimica</th>
-      <th>Tipo actuacion</th>
-      <th>Intensidad actuacion</th>
-      <th>Fecha actuacion</th>
-      <th>Trabajador</th>
-      <th>Maquina</th>
-      <th>Horas</th>
-      <th>Minutos</th>
-      <th>Notas</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+                        <br>
+                        
+                        </table>
+                            </div>
+                        </div>
+      </div>
 
-  <tbody>
-    <% @actividads.each do |actividad| %>
-      <tr>
-        <td><%= actividad.act_para %></td>
-        <td><%= actividad.trabajo %></td>
-        <td><%= actividad.fecha %></td>
-        <td><%= actividad.campo %></td>
-        <td><%= actividad.fitosanitario %></td>
-        <td><%= actividad.dosis %></td>
-        <td><%= actividad.cantidad %></td>
-        <td><%= actividad.litros_caldo %></td>
-        <td><%= actividad.plaga %></td>
-        <td><%= actividad.justifica_tratamiento %></td>
-        <td><%= actividad.numero_lote %></td>
-        <td><%= actividad.bodega %></td>
-        <td><%= actividad.det_med_no_quimica %></td>
-        <td><%= actividad.tipo_actuacion %></td>
-        <td><%= actividad.intensidad_actuacion %></td>
-        <td><%= actividad.fecha_actuacion %></td>
-        <td><%= actividad.trabajador %></td>
-        <td><%= actividad.maquina %></td>
-        <td><%= actividad.horas %></td>
-        <td><%= actividad.minutos %></td>
-        <td><%= actividad.notas %></td>
-        <td><%= link_to 'Show', actividad %></td>
-        <td><%= link_to 'Edit', edit_actividad_path(actividad) %></td>
-        <td><%= link_to 'Destroy', actividad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Actividad', new_actividad_path %>
+</div>
+                <!-- /.container-fluid -->

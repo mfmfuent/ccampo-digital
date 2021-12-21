@@ -6,11 +6,11 @@
 
   <div class="form-floating mb-2">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :class =>'form-control' %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Instrucciones para restablecer la contraseña",class:"btn btn-primary w-100"  %>
+    <%= f.submit "Instrucciones restablecer la contraseña", :class =>'btn btn-primary w-100' %>
   </div>
 <% end %>
 

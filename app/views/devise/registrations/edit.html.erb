@@ -5,7 +5,7 @@
 
   <div class="form-floating mb-0">
     <%= f.label :email %> <br>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -14,7 +14,7 @@
 
   <div class="form-floating mb-0">
     <%= f.label :contraseña %> <i>(déjelo en blanco si no quiere cambiarlo)</i>
-    <%= f.password_field :password, autocomplete: "new-password", class:"form-control" %>
+    <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       
       <em><%= @minimum_password_length %> caracteres mínimo</em>
@@ -23,22 +23,22 @@
 
   <div class="form-floating mb-0">
     <%= f.label :confirma_contraseña %>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 <i>(necesitamos su contraseña actual para confirmar sus cambios)</i><br>
   <div class="form-floating mb-2">
     
     <%= f.label :contraseña_actual %>  
-    <%= f.password_field :current_password, autocomplete: "current-password", class:"form-control" %>
+    <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Actualizar",class:"btn btn-primary w-50" %>
+    <%= f.submit "Actualizar" %>
   </div>
 <% end %>
 
 <h5>Cancelar mi cuenta</h5>
 
-<p><%= button_to "Cancelar mi cuenta", registration_path(resource_name), data: { confirm: "Estas seguro?" }, method: :delete ,class:"btn btn-primary w-50"%></p>
+<p><%= button_to "Cancelar mi cuenta", registration_path(resource_name), data: { confirm: "Estas seguro?" }, method: :delete %></p>
 
 <%= link_to "Vover", :back ,class:"btn btn-primary w-25" %>

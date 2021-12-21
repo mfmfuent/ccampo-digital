@@ -11,112 +11,177 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :act_para %>
-    <%= form.text_field :act_para %>
+  <div class="col-6 mt-2">
+    <%= form.label :actividad_para, class: "form-label" %>
+    <%= form.text_field :act_para, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Actividad Para requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :trabajo %>
-    <%= form.text_field :trabajo %>
+  <div class="col-6 mt-2">
+    <%= form.label :trabajo, class: "form-label" %>
+    <%= form.text_field :trabajo, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Tipo de trabajo requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :fecha %>
-    <%= form.date_select :fecha %>
+  <div class="col-6 mt-2">
+    <%= form.label :fecha, class: "form-label" %>
+    <%= form.date_select :fecha, required: true %>
+    <div class="invalid-feedback">
+         Fecha requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :campo %>
-    <%= form.text_field :campo %>
+  <div class="col-6 mt-2">
+    <%= form.label :campo, class: "form-label" %>
+    <%= form.text_field :campo, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Campo requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :fitosanitario %>
-    <%= form.text_field :fitosanitario %>
+  <div class="col-6 mt-2">
+    <%= form.label :fitosanitario, class: "form-label" %>
+    <%= form.text_field :fitosanitario, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Fitosanitario requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :dosis %>
-    <%= form.text_field :dosis %>
+  <div class="col-6 mt-2">
+    <%= form.label :dosis, class: "form-label" %>
+    <%= form.text_field :dosis, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Dosis requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :cantidad %>
-    <%= form.text_field :cantidad %>
+  <div class="col-6 mt-2">
+    <%= form.label :cantidad, class: "form-label" %>
+    <%= form.text_field :cantidad, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Cantidad requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :litros_caldo %>
-    <%= form.text_field :litros_caldo %>
+  <div class="col-6 mt-2">
+    <%= form.label :litros_caldo, class: "form-label" %>
+    <%= form.text_field :litros_caldo, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Litros de Caldo requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :plaga %>
-    <%= form.text_field :plaga %>
+  <div class="col-6 mt-2">
+    <%= form.label :plaga, class: "form-label" %>
+    <%= form.text_field :plaga, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Cantidad requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :justifica_tratamiento %>
-    <%= form.text_field :justifica_tratamiento %>
+  <div class="col-6 mt-2">
+    <%= form.label :justifica_tratamiento, class: "form-label" %>
+    <%= form.text_field :justifica_tratamiento, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Cantidad requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :numero_lote %>
-    <%= form.text_field :numero_lote %>
+  <div class="col-6 mt-2">
+    <%= form.label :numero_lote, class: "form-label" %>
+    <%= form.text_field :numero_lote, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Cantidad requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :bodega %>
-    <%= form.text_field :bodega %>
+  <div class="col-6 mt-2">
+    <%= form.label :bodega, class: "form-label" %>
+    <%= form.text_field :bodega, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Cantidad requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :det_med_no_quimica %>
-    <%= form.text_field :det_med_no_quimica %>
+  <div class="col-6 mt-2">
+    <%= form.label :det_med_no_quimica, class: "form-label" %>
+    <%= form.text_field :det_med_no_quimica, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Cantidad requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :tipo_actuacion %>
-    <%= form.text_field :tipo_actuacion %>
+  <div class="col-6 mt-2">
+    <%= form.label :tipo_actuacion, class: "form-label" %>
+    <%= form.text_field :tipo_actuacion, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Cantidad requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :intensidad_actuacion %>
-    <%= form.text_field :intensidad_actuacion %>
+  <div class="col-6 mt-2">
+    <%= form.label :intensidad_actuacion, class: "form-label" %>
+    <%= form.text_field :intensidad_actuacion, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Cantidad requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :fecha_actuacion %>
-    <%= form.date_select :fecha_actuacion %>
+  <div class="col-6 mt-2">
+    <%= form.label :fecha_actuacion, class: "form-label" %>
+    <%= form.date_select :fecha_actuacion, required: true %>
+    <div class="invalid-feedback">
+         Cantidad requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :trabajador %>
-    <%= form.text_field :trabajador %>
+  <div class="col-6 mt-2">
+    <%= form.label :trabajador, class: "form-label" %>
+    <%= form.text_field :trabajador, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Cantidad requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :maquina %>
-    <%= form.text_field :maquina %>
+  <div class="col-6 mt-2">
+    <%= form.label :maquina, class: "form-label" %>
+    <%= form.text_field :maquina, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Cantidad requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :horas %>
-    <%= form.time_select :horas %>
+  <div class="col-6 mt-2">
+    <%= form.label :horas, class: "form-label" %>
+    <%= form.time_select :horas, required: true %>
+    <div class="invalid-feedback">
+         Horas requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :minutos %>
-    <%= form.time_select :minutos %>
+  <div class="col-6 mt-2">
+    <%= form.label :minutos, class: "form-label" %>
+    <%= form.time_select :minutos, required: true %>
+    <div class="invalid-feedback">
+         Minutos requerido.
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :notas %>
-    <%= form.text_area :notas %>
+  <div class="col-6 mt-2">
+    <%= form.label :notas, class: "form-label" %>
+    <%= form.text_area :notas, class: "form-control", required: true %>
+    <div class="invalid-feedback">
+         Nota requerido.
+    </div>
   </div>
-
+<br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Crear Actividad", :class => "btn btn-primary text-decoration-none"  %>
   </div>
 <% end %>
+<br>
+
